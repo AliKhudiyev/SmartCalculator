@@ -1,0 +1,32 @@
+.tab tr {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cont:hover {
+    background-color: grey;
+    text-decoration: underline;
+}
+
+.cont a {
+    font-size: 20px;
+}
+
+.tab table, .tab th, .tab td {
+    border: 1px dashed black;
+    padding: 5px;
+}
+
+#aside:hover {
+    opacity:0.9;
+    background-color: black;
+    color: white;
+}
+
+#aside:not(hover) {
+    opacity: 0.2;
+    background-color: grey;
+}
