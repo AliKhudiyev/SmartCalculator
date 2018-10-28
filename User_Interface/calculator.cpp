@@ -1,8 +1,8 @@
 #include<iostream>
 #include<string>
 #include<cmath>
-#include"exception.hpp"
 #include"calculator.hpp"
+#include"operator.hpp"
 #include<functional>
 
 //namespace

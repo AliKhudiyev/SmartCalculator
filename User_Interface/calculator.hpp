@@ -3,7 +3,9 @@ Calculator header file which supports epxression checking and calculating
 
 */
 
-#include"operator.hpp"
+//#include"operator.hpp"
+#include"list.hpp"
+#include"exception.hpp"
 
 #pragma once
 

@@ -8,7 +8,7 @@ Updated:
     -new function for handling errors in more understandable way
 */
 
-#include<cstring>
+#include<string>
 
 #pragma once
 

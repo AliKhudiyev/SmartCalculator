@@ -5,11 +5,11 @@
 
 int main(){
 
-   Vector<long double> vect;
-
-//   vect.init();
-//   std::cout<<"Final vector:\n";
-//   vect.display();
+//   Vector<long double> vect;
+//
+//  vect.init();
+//  std::cout<<"Final vector:\n";
+//  vect.display();
 
     std::string expr;//="55.82+(arctan(2!+3.785)*3^(2/1)+(7+4)*cos7)+(0-34)";
     std::cout<<"Enter a string : ";

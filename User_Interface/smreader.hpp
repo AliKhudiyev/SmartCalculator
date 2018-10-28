@@ -61,6 +61,15 @@ class Vector{
     //checks if the given system does not contain any wrong(or i-repetitive) sub-system
     //it gives true, if it does not contain such sub-system, and false, otherwise
 
+    void replace(std::vector<unsigned>& order);     //incomplete
+    //swaps the subsystems according to order vector
+
+    void sort(unsigned index, unsigned beg_index, unsigned end_index);     //incomplete
+    //sorts the elements of vector situated at index
+
+    unsigned get_endIndex(unsigned beg_index, unsigned index);     //incomplete
+    //returns the final index where the number which occurs at beg_index occurs
+
     public:
     void init();
     //initializes all the private variables
@@ -77,6 +86,9 @@ class Vector{
 
     unsigned get_sys() const;
     //sys getter
+
+    void sort();    //incomple
+    //sorts the whole vector
 
     void debug_print() const;
     //displays all elements on the purpose of testing and debugging
@@ -240,6 +252,65 @@ unsigned Vector<T>::is_ready() const{
     }
     return 1;
 }
+
+// template<class T>
+// void Vector<T>::replace(std::vector<unsigned>& order){
+//     std::vector<T> ordered_vect(size,0);
+//     T tmp;
+//     for(unsigned i=0;i<size/sys;++i){
+//         for(unsigned j=0;j<sys;++j){
+//             ordered_vect[order[i]*sys+j]=vect[i*sys+j];
+//         }
+//     }
+// }
+
+// template<class T>
+// void Vector<T>::sort(unsigned index, unsigned beg_index, unsigned end_index){
+//     unsigned row=size/sys;
+//     std::vector<unsigned> order(row,0);
+
+//     for(unsigned i=0;i<row;++i){
+//         for(unsigned j=0;j<row;++j){
+//             if(vect[i*sys+index]>vect[j*sys+index]){
+//                 ++order[i];
+//             }
+//         }
+//     }
+
+//     unsigned tmp, cnt;
+//     for(unsigned i=0;i<row-1;++i){
+//         cnt=0;
+//         for(unsigned j=i+1;j<row;++j){
+//             if(order[j]==order[i]){
+//                 order[k]+=(++cnt);
+//             }
+//         }
+//     }
+//     vect.replace(order);
+
+// }
+
+// template<class T>
+// unsigned Vector<T>::get_endIndex(unsigned beg_index, unsigned index){
+//     for(unsigned i=beg_index;i<size/sys;++i){
+//         if(vect[beg_index*sys+index]!=vect[(i+1)*sys+index]){
+//             return i+1;
+//         }
+//     }
+//     return 0;
+// }
+
+// template<class T>
+// void Vector<T>::sort(){
+//     unsigned beg_index=0, end_index=size/sys;
+//     while(1){
+//         for(unsigned index=0;index<sys;++index){
+//             vect.sort(index,beg_index,end_index);
+//             end_index=vect.get_endIndex(beg_index,index);
+//         }
+//         beg_index=end_index;
+//     }
+// }
 
 template<class T>
 std::vector<T>* Vector<T>::get_vect() const{
